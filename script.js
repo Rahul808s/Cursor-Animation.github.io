@@ -5,6 +5,18 @@ main.addEventListener("mousemove", function (dets) {
         gsap.to(cursor, {
                 x: dets.x,
                 y: dets.y,
-                duration: 1
-        });
+                duration: 0.6
+        })
+});
+
+
+document.querySelector(".main img").addEventListener("mouseenter", function () {
+        gsap.to(cursor, {
+                scale: 3
+        })
 })
+document.querySelector(".main img").addEventListener("mouseleave",function () {
+                gsap.to(cursor, {
+                        scale: 1
+                })
+        })
